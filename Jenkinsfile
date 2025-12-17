@@ -30,4 +30,4 @@ pipeline {
             echo 'Échec du build ou des tests.'
         }
     }
-}
+
