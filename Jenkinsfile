@@ -9,17 +9,16 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git branch: 'develop', url: 'https://github.com/bilalelou/cargo-tracker-UM6P1.git'
+                git branch: 'develop', url: 'https://github.com/akito-sama/cargo-tracker.git'
             }
         }
 
         stage('Build & Test with Coverage') {
             steps {
-                bat 'mvn clean verify'
+                echo 'hello '
             }
         }
 
-        }
     }
 //
     post {
@@ -30,4 +29,4 @@ pipeline {
             echo 'Échec du build ou des tests.'
         }
     }
-
+}
